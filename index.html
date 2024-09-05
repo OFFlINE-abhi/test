@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: aquamarine;
+            animation: changeBackground 10s infinite;
+            transition: background-color 1s;
+        }
+
+        .navbar {
+            display: flex;
+            margin: 10px;
+            background-color: none;
+            border: solid rgb(228, 223, 223) 5px;
+            border-radius: 10px;
+        }
+
+        .left {
+            align-items: center;
+            text-align: center;
+            display: flex;
+            border-radius: 10px;
+            margin: 5px;
+            background-color: white;
+            width: 50%;
+        }
+
+        .logo {
+            height: 50px;
+            width: 50px;
+            color: black;
+            border: solid white 5px;
+            border-radius: 50px;
+        }
+
+        .left ul{
+            display: flex;
+        }
+        .left ul li{
+            list-style: none;
+        }
+
+        .left ul li a{
+            border: solid rgb(200, 178, 230) 2px;
+            border-radius: 5px;
+            color: violet;
+            padding: 3px;
+            margin: 10px;
+            text-decoration: none;
+        }
+
+        .right {
+            border-radius: 10px;
+            margin: 5px;
+            padding: 10px;
+            background-color: white;
+            width: 50%;
+        }
+
+        .btn-login{
+            background-color: rgb(200, 178, 230);
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 0 40em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .main{
+            border: solid rgb(228, 223, 223) 5px;
+            border-radius: 10px;
+            margin: 5px;
+            padding: 10px;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="left">
+            <img src="/img/p.webp" alt="" class="logo">
+            <ul>
+                <li><a href="http://Home">Home</a></li>
+                <li><a href="http://Home">Services</a></li>
+                <li><a href="http://Home">Contact</a></li>
+                <li><a href="http://Home">About</a></li>
+                <li><a href="http://Home">Company</a></li>
+            </ul>
+        </div>
+        <div class="right">
+           <button class="btn-login">Login</button>
+        </div>
+    </nav>
+    <div class="container">
+
+    </div>
+    <div class="main">
+        <p>
+            <i><b>Lorem ipsum</b></i> <br><br>
+            dolor sit amet consectetur, adipisicing elit. A <b>architecto</b> facere possimus veritatis fuga id
+            neque veniam saepe soluta beatae. <b><i>Recusandae</i></b>  in, cupiditate laborum neque beatae repellat odit sunt eum.
+        </p>
+    </div>
+</body>
+<script>
+    const colors = ["#ff9999", "#99ccff", "#99ff99", "#ffcc99"];
+    let currentIndex = 0;
+
+    function changeBackground() {
+        document.body.style.backgroundColor = colors[currentIndex];
+        currentIndex = (currentIndex + 1) % colors.length;
+    }
+
+    setInterval(changeBackground, 5000); // Change background every 5 seconds
+
+</script>
+</html>
